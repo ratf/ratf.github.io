@@ -4,7 +4,7 @@ author: RATF
 layout: page
 ---
 
-<strong>cut -d: -f1 /etc/passwd</strong><br>
+<strong>root@ctf:~# cut -d: -f1 /etc/passwd</strong><br>
 Jonh<br>
 Mary<br>
 Claire<br>
