@@ -2,7 +2,7 @@
 layout: post
 title: Pwn0
 categories:
-  - Hack a flag aracaju
+  - Hackaflag aracaju
 published: true
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi aliquet fermentum dolor at tincidunt. Fusce justo magna, egestas vitae velit et, porttitor scelerisque ipsum. Maecenas nulla nibh, fringilla eu sodales eget, varius quis quam. Praesent ultrices quam eget turpis condimentum mollis sit amet non neque. Morbi nisl ipsum, scelerisque varius euismod sit amet, tempus ut lacus. Aliquam tincidunt nec lorem sit amet laoreet. Pellentesque ornare pulvinar dolor ut imperdiet. Vivamus mi turpis, laoreet congue magna id, imperdiet venenatis mi. Fusce quis consectetur nisi. Aliquam ante turpis, pulvinar et ante vel, tempor laoreet augue. Phasellus rutrum facilisis volutpat. Donec egestas erat ac ligula faucibus pharetra. Curabitur iaculis eros sem, nec convallis metus vehicula eget.
