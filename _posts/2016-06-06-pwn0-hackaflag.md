@@ -5,7 +5,7 @@ categories:
   - Hackaflag aracaju
 published: true
 ---
-### Link para pwn3:[https://s3-us-west-1.amazonaws.com/contattafiles/ratf/dRi0rQk6fm53a8r/pwn3](https://s3-us-west-1.amazonaws.com/contattafiles/ratf/dRi0rQk6fm53a8r/pwn3)
+<div class="message">Link para pwn3:[https://s3-us-west-1.amazonaws.com/contattafiles/ratf/dRi0rQk6fm53a8r/pwn3](https://s3-us-west-1.amazonaws.com/contattafiles/ratf/dRi0rQk6fm53a8r/pwn3)</div>
 Ao se executar o pwn pela primeira vez e tentar fazer um overflow enviando um monte de A's para a pergunta "Qual seu nome?", percebi que ele limitava a quantidade de caracteres que eram impressos.
 
 Uma proteção contra overflow? Agora o negócio tava mais complicado que os outros dois pwn.
