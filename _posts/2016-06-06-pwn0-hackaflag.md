@@ -5,79 +5,18 @@ categories:
   - Hack a flag aracaju
 published: true
 ---
-Link para pwn3:
-https://s3-us-west-1.amazonaws.com/contattafiles/ratf/dRi0rQk6fm53a8r/pwn3
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi aliquet fermentum dolor at tincidunt. Fusce justo magna, egestas vitae velit et, porttitor scelerisque ipsum. Maecenas nulla nibh, fringilla eu sodales eget, varius quis quam. Praesent ultrices quam eget turpis condimentum mollis sit amet non neque. Morbi nisl ipsum, scelerisque varius euismod sit amet, tempus ut lacus. Aliquam tincidunt nec lorem sit amet laoreet. Pellentesque ornare pulvinar dolor ut imperdiet. Vivamus mi turpis, laoreet congue magna id, imperdiet venenatis mi. Fusce quis consectetur nisi. Aliquam ante turpis, pulvinar et ante vel, tempor laoreet augue. Phasellus rutrum facilisis volutpat. Donec egestas erat ac ligula faucibus pharetra. Curabitur iaculis eros sem, nec convallis metus vehicula eget.
 
-Ao se executar o pwn pela primeira vez e tentar fazer um overflow enviando um monte de A's para a pergunta "Qual seu nome?", percebi que ele limitava a quantidade de caracteres que eram impressos.
+Suspendisse fermentum dignissim turpis, et bibendum augue posuere vitae. Cras luctus justo turpis, ac molestie nisi porta in. Maecenas purus urna, pharetra vitae metus eget, lacinia sollicitudin lorem. Curabitur et nibh quis augue porta ultricies. Integer vitae viverra nulla. Nullam lacinia vel dolor et facilisis. Praesent finibus ante eget sem efficitur, non dignissim nunc porta. Nulla fermentum pulvinar erat sed finibus.
 
-Uma proteção contra overflow? Agora o negócio tava mais complicado que os outros dois pwn.
+Curabitur nec laoreet lorem, at ornare ligula. Proin non lacinia nibh. In tincidunt mauris odio, sit amet consequat felis pretium id. Duis libero dolor, accumsan vel sodales non, tincidunt et purus. Morbi ullamcorper turpis id tellus molestie pellentesque. Curabitur auctor, leo id accumsan tristique, elit orci aliquet turpis, nec placerat leo ante eu urna. Donec laoreet dui vel fringilla scelerisque. Aenean egestas imperdiet dui vitae mattis. Curabitur malesuada aliquam pulvinar. Aenean fringilla facilisis sapien a varius. Sed at ornare ante. Mauris eu velit id erat finibus facilisis non sed quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
-Mas por acaso, antes de analisar o pwn no gdb ou objdump, percebi que ele substituia qualquer "k" (apenas minusculo) por "lol" e com k's suficientes os lol estouravam o espaço reservado para eles e passariam por cima de tudo, causando um buffer overflow. 
-(Acho que o conhecimento que isso passa é de que sempre se deve testar qualquer tipo de INPUT para verificar falhas em um programa)
+Pellentesque posuere tristique sollicitudin. Cras quis vulputate nunc, et pellentesque ipsum. Nunc auctor metus non ligula hendrerit suscipit. Mauris id euismod ex. Cras posuere sem id justo vulputate luctus. Donec quis odio pretium odio iaculis porttitor vitae porta tellus. Fusce consequat tempus odio ac laoreet. Aenean facilisis massa nec lorem suscipit, eu facilisis turpis pharetra.
 
-Abrindo o pwn no gdb e mandando um info functions, achei 4 funções que eram interessantes:
+Integer enim nunc, facilisis efficitur dapibus id, viverra vitae risus. Sed non lacus a ex placerat sagittis. Pellentesque nec felis et diam fermentum auctor et vitae ex. Nunc at tortor nec erat auctor suscipit. Curabitur rhoncus nunc vel mauris commodo volutpat. In dapibus, massa a auctor luctus, ante purus tincidunt lectus, vitae accumsan ante sem ac lorem. Morbi sit amet nulla dictum, cursus sem ac, hendrerit nunc. Morbi malesuada rutrum nibh luctus consequat. Cras interdum, nisi vitae tincidunt vestibulum, neque neque ornare orci, nec pretium mauris mauris sit amet dolor. Pellentesque mollis magna et pharetra consequat. Cras lobortis auctor turpis ac rhoncus. Curabitur dignissim mauris sed tincidunt consequat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer volutpat sed purus molestie pellentesque.
 
-0x08048f13  get_flag
-0x08048f21  replace
-0x080491af  vuln
-0x0804932d  main
+Nullam laoreet, eros non congue mollis, felis elit rhoncus neque, facilisis sodales nisi felis in quam. Donec in elit auctor, sodales nibh nec, varius massa. Suspendisse blandit augue arcu, et luctus nisl condimentum eget. Donec id lorem non risus porttitor imperdiet. Vestibulum quis arcu quis lacus molestie efficitur vitae sed ligula. Etiam viverra rutrum eleifend. Donec sed sapien turpis. Quisque pellentesque sollicitudin dui, vitae tristique nulla malesuada vitae. Nullam justo ligula, pharetra mollis cursus ut, bibendum quis diam. Praesent purus justo, imperdiet vitae scelerisque cursus, facilisis nec magna. Curabitur vehicula dui at faucibus placerat. Vivamus consectetur rhoncus tincidunt. Aliquam aliquam vitae sem eu tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
 
-Coloquei breakpoints em todas (b replace, b vuln, b main, b get_flag) e coloquei o pwn pra rodar (run).
+Mauris varius pulvinar eleifend. Nunc lobortis euismod placerat. Nam pharetra nunc in sapien scelerisque tincidunt. Donec a tristique orci. Donec ac tempor massa. Curabitur orci sem, porttitor ac dapibus fringilla, vulputate ac dolor. Donec eleifend ipsum id elementum ullamcorper.
 
-Primeiro breakpoint para em main, função principal do programa (pouca novidade aqui). Uso o comando disas main e tento analisar o código (tô longe de saber muito de asm), entendi que main, basicamente só serve pra chamar a função vuln.
-
-   0x08049333 <+6>:     call   0x80491af <vuln>
-
-Com o comando c, mando pwn continuar. E, como imaginei, ele para em vuln. Tento analisar o código da função usando disas vuln, mas a coisa fica um pouco complicada por causa do meu pouco conhecimento de asm. Mesmo assim, compreendo algumas linhas e conclui que vuln era responsável por imprimir a mensagem perguntando do nome, copiar o que a função replace retornar, para o buffer vulnerável usando a perigosa função strcpy, e então imprimir na tela o resultado. Só lembrando que isso tudo eram suposições (boa parte baseadas nas chamadas para funções que vi no código, tipo printf, fgets, call para replace, strcpy...)., já que meu conhecimento em asm (AINDA) 
-não é suficiente. 
-
-Como o código de vuln já mostrava, quando mandei o GDB continuar, surgiu a mensagem pedindo para digitar o nome. Depois de digitar qualquer coisa e teclar enter, o breakpoint em replace faz efeito. 
-
-Analisar a função replace foi mais complicado. A conclusão que tirei, por achismo, é que ela fica responsável por varrer a string em busca de K's e, caso encontre, substitua por lol. E provavelmente retorne a string modificada.
-
-Instruindo o gdb a continuar, vi que o programa finaliza exibindo a mensagem e só isso.
-
-Então executei o programa novamente no gdb (usando o comando run), mas dessa vez meti um monte de k's no lugar do meu nome.
-Aí, depois de mandar o pwn continuar após o breakpoint em replace, o gdb me mostra:
-
-Program received signal SIGSEGV, Segmentation fault.
-0x6f6c6c6f  in ?? ()
-
-6f6c6c6f = ollo em hex, o que significa que temos meios lol's em eip, o que significa que podemos sobreescreve-lo com coisa mais útil. Tipo o endereço de get_flag.
-
-Eu aposto que deve haver um jeito mais prático, mas no calor do ctf, fui manualmente testando quantos k's eram necessários para chegar em EIP. De k em k, descobri que 22 k's corrompem eip com um ol, meio lol. Então usei 21 k's mais um caractere qualquer (usei o l no dia) e 4 A's.
-
-Oi, lollollollollollollollollollollollollollollollollollollollollollAAAA
-
-
-Program received signal SIGSEGV, Segmentation fault.
-0x41414141 in ?? ()
-
-Achei onde pôr o endereço de get_flag ;D
-
-Para testar a solução, usei o python para criar um arquivo que serviria de entrada para pwn: 
-python -c 'print "k"*21 + "l" + "\x13\x8f\x04\x08"' > input
-
-Obs: eu já tinha anotado o endereço de get_flag (0x08048f13) depois de analisar as funções no gdb, imaginei que seria útil. E, como sabemos que a regra usada nesse caso para manipulação de armazenamento na memória é Little Endian, invertemos o endereço: 08 04 8f 13 vira 13 8f 04 08.
-
-Para ver se tudo funcionava, no gdb com pwn3, coloquei um breakpoint apenas em get_flag. Então rodei o programa e redirecionei a entrada para o arquivo input, assim, ele iria ler o conteúdo do arquivo e usar como resposta para a pergunta "Qual seu nome?".
-
-(gdb) run < input
-Starting program: /home/update/pwn3 < input
-Qual seu nome? Oi, lollollollollollollollollollollollollollollollollollollollolloll▒
-
-
-Breakpoint 1, 0x08048f13 in get_flag ()
-
-Missão cumprida. EIP apontava para get_flag.
-
-(gdb) c
-Continuando.
-cat: flag.txt: Arquivo ou diretório não encontrado
-
-Program received signal SIGSEGV, Segmentation fault.
-0x08048f1f in get_flag ()
-
-Agora bastava explorar o pwn que estava rodando em algum ip dentro da rede do hack a flag e ver o contéudo do arquivo flag.txt ;)
-
-EOF
+Ut posuere elementum neque scelerisque interdum. Vivamus maximus nunc vel lectus maximus lacinia. Fusce hendrerit ipsum eget vestibulum tempor. Proin ultrices augue diam, sed eleifend augue blandit in. Vestibulum mollis, arcu ut dapibus bibendum, dolor velit facilisis lorem, et pellentesque purus leo ac quam. Vestibulum nec metus non libero placerat blandit sit amet non ligula. Sed laoreet, dolor et gravida fringilla, turpis felis egestas massa, non malesuada mi eros in dolor. Nam laoreet hendrerit nisl, id suscipit dolor luctus at. Aliquam erat volutpat. Sed vel varius libero, ac aliquet lacus. Cras quis dui sit amet ex gravida fringilla eu pulvinar libero. Integer orci mauris, iaculis porttitor justo at, mattis hendrerit magna. Phasellus pulvinar urna odio, in ultricies elit mollis non.
