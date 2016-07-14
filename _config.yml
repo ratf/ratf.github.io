@@ -1,0 +1,39 @@
+# Dependencies
+markdown:            kramdown
+highlighter:         rouge
+
+# Gems (for Jekyll 3.0)
+gems: [jekyll-paginate]
+
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+
+# Setup
+title:               RATF
+tagline:             'Rage Against The Flag CTF Team'
+description:         ''
+url:                 http://naringu.oonlab.com
+baseurl:             /
+paginate:            7
+
+# About/contact
+author:
+  name:              RATF
+  url:               https://twitter.com/ratf
+  email:             ratf@gmail.com
+
+# Custom vars
+version:             2.0
+
+# Social Media
+github:				http://github.com/ratf
+twitter:			http://twitter.com/ratf
+disqus:             ratf
+
+# Theme Author (Please don't edit this line cause of MIT LICENSE rules)
+theme:
+  creator:			Rizky Ariestiyansyah
+  codename:			Naringu
+  link:             https://github.com/ariestiyansyah/naringu
