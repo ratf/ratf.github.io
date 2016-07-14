@@ -4,7 +4,11 @@ title: Pwn0
 categories:
 - Hack a flag aracaju
 ---
-
+div {
+    text-align: justify;
+    text-justify: inter-word;
+}
+<div>
 Link para pwn3:
 https://s3-us-west-1.amazonaws.com/contattafiles/ratf/dRi0rQk6fm53a8r/pwn3
 
@@ -125,3 +129,4 @@ dentro da rede do hack a flag e ver o contéudo do arquivo
 flag.txt ;)
 
 EOF
+</div>
