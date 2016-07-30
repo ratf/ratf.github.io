@@ -6,26 +6,26 @@ published: true
 ---
 
 <strong>root@ctf:~# cut -d: -f1 /etc/passwd</strong><br>
-- R4yd3r C3s
-- Manoel Abreu
-- User X
-- skate_forever
-- Fábio Coelho
-- João Paulo
-- Luis
-- Vitor
-- TheMasterOFC
-- Weslley Alex
-- Rodrigo MR.
-- Hpb0x27
-- Marcus Muzak
-- Brenn0rds
-- Ivan Jrkalet
-- Yuri Gottfrid
-- Natali Nshonda
-- Marks Junior
-- Jow Johnoliv
-- Vinicius Morpheusbdk
-- Gabriel Cryptonzac
-- Salviano Lima
-- Franciney Araújo
+- R4yd3r_C3s <br>
+- Manoel_Abreu<br>
+- User_X<br>
+- skate_forever<br>
+- Fabio_Coelho<br>
+- Joao_Paulo<br>
+- Luis<br>
+- Vitor<br>
+- TheMasterOFC<br>
+- Weslley_Alex<br>
+- Rodrigo_MR.<br>
+- Hpb0x27<br>
+- Marcus_Muzak<br>
+- Brenn0rds<br>
+- Ivan_Jrkalet<br>
+- Yuri_Gottfrid<br>
+- Natali_Nshonda<br>
+- Marks_Junior<br>
+- Jow_Johnoliv<br>
+- Vinicius_Morpheusbdk<br>
+- Gabriel_Cryptonzac<br>
+- Salviano_Lima<br>
+- Franciney_Araujo
