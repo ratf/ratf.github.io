@@ -2,7 +2,7 @@
 layout: post
 title: XPL - Pwn3
 categories:
-  - Hackaflag aracaju
+  - Hackaflag_Aracaju
 published: true
 ---
 <div class="message">Link para pwn3:https://s3-us-west-1.amazonaws.com/contattafiles/ratf/dRi0rQk6fm53a8r/pwn3</div>
