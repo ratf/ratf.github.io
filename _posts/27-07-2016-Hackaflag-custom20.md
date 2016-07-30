@@ -2,7 +2,7 @@
 layout: post
 title: Custom 20
 categories:
-  - Hackaflag SP Classificatória
+  - Hackaflag_SP
 published: true
 ---
 <div class="message"> O PROBLEMA </div>
