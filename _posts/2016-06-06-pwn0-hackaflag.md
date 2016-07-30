@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Pwn0
+title: XPL - Pwn3
 categories:
   - Hackaflag aracaju
 published: true
