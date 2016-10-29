@@ -1,4 +1,10 @@
---- layout: default title: "CTF RATF" permalink: ctf/index.html ---
+--- 
+layout: default 
+title: "CTF RATF" 
+permalink: ctf/index.html
+---
+<div class="page">
+
 Evento
 
 O evento RATF@ctf é voltado para todos que querem discutir temas como privacidade, invasões, 
@@ -22,3 +28,5 @@ detector de intrusões, etc), implementação de políticas de backup, testes de
 References
 
    1. file:///opt/ratf.github.io/{{ site.baseurl }}
+  
+</div>
