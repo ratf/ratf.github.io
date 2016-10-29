@@ -1,7 +1,10 @@
 --- 
-layout: default 
-title: "CTF RATF" 
-permalink: ctf/index.html
+---
+title: RATF@CTF
+author: RATF
+layout: page
+published: true
+---
 ---
 <div class="page">
 
