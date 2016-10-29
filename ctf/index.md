@@ -1,4 +1,4 @@
---- layout: default title: "CTF RATF" permalink: ctf.html ---
+--- layout: default title: "CTF RATF" permalink: ctf/index.html ---
 Evento
 
 O evento RATF@ctf é voltado para todos que querem discutir temas como privacidade, invasões, 
