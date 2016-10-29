@@ -6,8 +6,6 @@ layout: page
 published: true
 ---
 ---
-<div class="page">
-
 Evento
 
 O evento RATF@ctf é voltado para todos que querem discutir temas como privacidade, invasões, 
@@ -32,4 +30,3 @@ References
 
    1. file:///opt/ratf.github.io/{{ site.baseurl }}
   
-</div>
