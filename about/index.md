@@ -1,7 +1,7 @@
 ---
 title: Membros
 author: RATF
-layout: page
+layout: default
 published: true
 ---
 
