@@ -15,7 +15,7 @@ DKR<br>
 Jordyf<br>
 Shx<br>
 Muzak<br>
-[Ferreirasc](github.com/ferreirasc)<br>
+[Ferreirasc](https://github.com/ferreirasc)<br>
 w00f<br>
 MaStErBiLL<br>
 b2e4gl3<br>
